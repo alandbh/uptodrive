@@ -1,9 +1,9 @@
 {
-    "name": "UP To Drive",
-    "short_name": "Up to Drive 2",
-    "description": "A humble file uploader",
+    "name": "UP To Drive3",
+    "short_name": "Up to Drive 3",
+    "description": "A humble file uploader3",
     "lang": "en-US",
-    "ïd": "/?homescreen=2",
+    "ïd": "/?homescreen=3",
     "icons": [
         {
             "src": "/icons/icon-512x512.png",

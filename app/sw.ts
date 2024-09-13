@@ -23,3 +23,7 @@ const serwist = new Serwist({
 });
 
 serwist.addEventListeners();
+
+self.addEventListener("fetch", function (event) {
+    console.log("aaaaaa", "fetch", event);
+});
