@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import type { ReactNode } from "react";
 
 const APP_NAME = "Up to Drive";
 const APP_DEFAULT_TITLE = "Up To Drive";
