@@ -1,5 +1,5 @@
 // Import necessary modules
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import path from "path";
 import { writeFile } from "fs/promises";
 
