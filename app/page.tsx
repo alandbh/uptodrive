@@ -29,7 +29,7 @@ export default function Home() {
     }
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col p-10 gap-10">
             <h1>Up To Drive</h1>
             <p>Just a humble Heuristic Collector`s Evidence Uploader</p>
             <div>
@@ -39,8 +39,13 @@ export default function Home() {
                     name="evidence"
                     id="evidence"
                 />
-                <div>
-                    <button onClick={handleSubmit}>manda</button>
+                <div className="mt-10">
+                    <button
+                        className="bg-blue-500 text-white/70 py-2 px-4 font-bold capitalize rounded"
+                        onClick={handleSubmit}
+                    >
+                        manda 1
+                    </button>
                 </div>
             </div>
         </div>

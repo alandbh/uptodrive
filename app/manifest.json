@@ -1,13 +1,21 @@
 {
     "name": "UP To Drive",
-    "short_name": "Up to Drive",
-    "ïd": "001",
+    "short_name": "Up to Drive 2",
+    "description": "A humble file uploader",
+    "lang": "en-US",
+    "ïd": "/?homescreen=2",
     "icons": [
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
         {
             "src": "/icons/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "any"
         },
         {
             "src": "/icons/icon-512x512.png",
@@ -25,7 +33,12 @@
             "files": [
                 {
                     "name": "file",
-                    "accept": ["image/*", "application/pdf"]
+                    "accept": [
+                        "image/*",
+                        "video/*",
+                        "audio/*",
+                        "application/pdf"
+                    ]
                 }
             ]
         }
@@ -33,6 +46,10 @@
     "theme_color": "#FF0000",
     "background_color": "#FF0000",
     "start_url": "/",
+    "scope": "./",
     "display": "standalone",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "launch_handler": {
+        "client_mode": "auto"
+    }
 }
