@@ -1,0 +1,23 @@
+{
+    "name": "UP To Drive",
+    "short_name": "Up to Drive",
+    "ïd": "001",
+    "icons": [
+        {
+            "src": "/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#FF0000",
+    "background_color": "#FF0000",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+}
