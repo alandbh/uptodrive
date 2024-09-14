@@ -6,17 +6,19 @@ export default function Home() {
 
     console.log({ inputRef });
 
-    const fileInput = inputRef.current; // Replace with your HTML element ID
+    // const fileInput = inputRef.current; // Replace with your HTML element ID
     // const file = fileInput.files?[0]
 
     function handleSubmit() {
-        if (fileInput && fileInput.files) {
-            console.log({ fileInput: fileInput.files[0] });
+        console.log("handle", inputRef.current?.files);
+
+        if (inputRef.current && inputRef.current.files) {
+            console.log({ fileInput: inputRef.current.files[0] });
 
             // return;
 
             const formData = new FormData();
-            formData.append("file", fileInput.files[0]);
+            formData.append("file", inputRef.current.files[0]);
 
             fetch("https://uptodrive.vercel.app/upload", {
                 method: "POST",
@@ -26,6 +28,8 @@ export default function Home() {
                 .then((data) => console.log(data))
                 .catch((error) => console.error(error));
         }
+
+        console.log("handle FALSE");
     }
 
     return (
