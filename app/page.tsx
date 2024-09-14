@@ -20,7 +20,7 @@ export default function Home() {
             const formData = new FormData();
             formData.append("file", inputRef.current.files[0]);
 
-            fetch("/upload", {
+            fetch("https://uptodrive.vercel.app/upload", {
                 method: "POST",
                 body: formData,
             })
