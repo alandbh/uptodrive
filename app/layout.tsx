@@ -7,6 +7,7 @@ const APP_DESCRIPTION = "Just a humble Heuristic Collector`s Evidence Uploader";
 
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -58,6 +59,13 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
     themeColor: "#FF0000",
 };
+
+<Script id="registersw">
+    {`if ("serviceWorker" in navigator) {
+    console.log("👍", "navigator.serviceWorker is supported");
+    navigator.serviceWorker.register("/sw.js");
+}`}
+</Script>;
 
 export default function RootLayout({
     children,

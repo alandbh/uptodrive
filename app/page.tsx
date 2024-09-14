@@ -13,19 +13,24 @@ export default function Home() {
         console.log("handle", inputRef.current?.files);
 
         if (inputRef.current && inputRef.current.files) {
-            console.log({ fileInput: inputRef.current.files[0] });
+            console.log({ fileInput: inputRef.current.files[0].name });
 
             // return;
 
             const formData = new FormData();
+            // const filename = inputRef.current.files[0].name;
             formData.append("file", inputRef.current.files[0]);
 
-            fetch("https://uptodrive.vercel.app/upload", {
+            //fetch("https://uptodrive.vercel.app/upload", {
+
+            fetch("/confirm", {
                 method: "POST",
                 body: formData,
             })
                 .then((response) => response.json())
-                .then((data) => console.log(data))
+                .then((data) => {
+                    console.log(data);
+                })
                 .catch((error) => console.error(error));
         }
 
