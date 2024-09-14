@@ -1,7 +1,7 @@
 // Import necessary modules
 import { NextResponse } from "next/server";
-import path from "path";
-import { writeFile } from "fs/promises";
+// import path from "path";
+// import { writeFile } from "fs/promises";
 
 // Define the POST handler for the file upload
 export const POST = async (req: any) => {
