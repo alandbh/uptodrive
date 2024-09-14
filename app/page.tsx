@@ -18,7 +18,7 @@ export default function Home() {
             const formData = new FormData();
             formData.append("file", fileInput.files[0]);
 
-            fetch("/upload", {
+            fetch("https://uptodrive.vercel.app/upload", {
                 method: "POST",
                 body: formData,
             })
@@ -30,7 +30,7 @@ export default function Home() {
 
     return (
         <div className="flex flex-col p-10 gap-10">
-            <h1>Up To Drive</h1>
+            <h1>Up To Drive 2</h1>
             <p>Just a humble Heuristic Collector`s Evidence Uploader</p>
             <div>
                 <input
