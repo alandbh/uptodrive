@@ -1,9 +1,9 @@
 {
-    "name": "UP To Drive6",
-    "short_name": "Up to Drive 6",
-    "description": "A humble file uploader6",
+    "name": "UP To Drive7",
+    "short_name": "Up to Drive 7",
+    "description": "A humble file uploader7",
     "lang": "en-US",
-    "ïd": "/?homescreen=6",
+    "ïd": "/?homescreen=7",
     "icons": [
         {
             "src": "/icons/icon-512x512.png",
@@ -24,7 +24,7 @@
         }
     ],
     "share_target": {
-        "action": "/confirm",
+        "action": "/upload",
         "method": "POST",
         "enctype": "multipart/form-data",
         "params": {
