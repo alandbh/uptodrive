@@ -19,6 +19,8 @@ export default function Confirm() {
             <h2>Filename:</h2>
 
             <pre>{filename}</pre>
+
+            <img src={`data:image/png;base64, ${filename}`} alt="test" />
         </div>
     );
 }

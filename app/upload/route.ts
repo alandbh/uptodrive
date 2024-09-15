@@ -27,17 +27,24 @@ export const POST = async (req: any) => {
     // Replace spaces in the file name with underscores
     const filename = file.name.replaceAll(" ", "_");
     console.log(filename);
-
-    // Given an incoming request...
-    const confirmUrl = new URL("/confirm", req.url);
-    // Add ?from=/incoming-url to the /login URL
-    confirmUrl.searchParams.set("filename", filename);
-    // And redirect to the new URL
-    return NextResponse.redirect(confirmUrl, {
-        status: 301,
-    });
+    ("use client");
 
     try {
+        const base64 = Buffer.from(await file.arrayBuffer()).toString("base64");
+
+        console.log(base64);
+
+        const encodedBase64Url = atob(base64);
+
+        // Given an incoming request...
+        const confirmUrl = new URL("/confirm", req.url);
+        // Add ?from=/incoming-url to the /login URL
+        confirmUrl.searchParams.set("filename", encodedBase64Url);
+        // And redirect to the new URL
+        return NextResponse.redirect(confirmUrl, {
+            status: 301,
+        });
+
         // Write the file to the specified directory (public/assets) with the modified filename
 
         // await writeFile(
