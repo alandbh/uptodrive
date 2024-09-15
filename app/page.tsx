@@ -27,13 +27,13 @@ export default function Home() {
             fetch("/upload", {
                 method: "POST",
                 body: formData,
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log(data);
-                    setPostResponse(data);
-                })
-                .catch((error) => console.error(error));
+            });
+            // .then((response) => response.json())
+            // .then((data) => {
+            //     console.log(data);
+            //     setPostResponse(data);
+            // })
+            // .catch((error) => console.error(error));
         }
 
         console.log("handle FALSE");
@@ -41,7 +41,7 @@ export default function Home() {
 
     return (
         <div className="flex flex-col p-10 gap-10">
-            <h1>Up To Drive 7</h1>
+            <h1>Up To Drive 8</h1>
             <p>Just a humble Heuristic Collector`s Evidence Uploader</p>
             <div>
                 <input

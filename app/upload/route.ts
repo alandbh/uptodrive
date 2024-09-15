@@ -28,6 +28,15 @@ export const POST = async (req: any) => {
     const filename = file.name.replaceAll(" ", "_");
     console.log(filename);
 
+    // Given an incoming request...
+    const confirmUrl = new URL("/confirm", req.url);
+    // Add ?from=/incoming-url to the /login URL
+    confirmUrl.searchParams.set("filename", filename);
+    // And redirect to the new URL
+    return NextResponse.redirect(confirmUrl, {
+        status: 301,
+    });
+
     try {
         // Write the file to the specified directory (public/assets) with the modified filename
 
@@ -37,6 +46,9 @@ export const POST = async (req: any) => {
         // );
 
         // Return a JSON response with a success message and a 201 status code
+        // return NextResponse.redirect("/confirm", {
+        //     status: 307,
+        // });
         return NextResponse.json({ Message: "Success", filename, status: 201 });
     } catch (error) {
         // If an error occurs during file writing, log the error and return a JSON response with a failure message and a 500 status code
