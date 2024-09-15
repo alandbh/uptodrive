@@ -1,8 +1,9 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Home() {
     const inputRef = useRef<HTMLInputElement>(null);
+    const [postResponse, setPostResponse] = useState<undefined | null>(null);
 
     console.log({ inputRef });
 
@@ -23,13 +24,14 @@ export default function Home() {
 
             //fetch("https://uptodrive.vercel.app/upload", {
 
-            fetch("/confirm", {
+            fetch("/upload", {
                 method: "POST",
                 body: formData,
             })
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data);
+                    setPostResponse(data);
                 })
                 .catch((error) => console.error(error));
         }
@@ -39,7 +41,7 @@ export default function Home() {
 
     return (
         <div className="flex flex-col p-10 gap-10">
-            <h1>Up To Drive 4</h1>
+            <h1>Up To Drive 6</h1>
             <p>Just a humble Heuristic Collector`s Evidence Uploader</p>
             <div>
                 <input
@@ -55,6 +57,9 @@ export default function Home() {
                     >
                         manda 1
                     </button>
+
+                    <h1>Post Response</h1>
+                    <pre>{JSON.stringify(postResponse, null)}</pre>
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ self.addEventListener("fetch", function (event) {
     const url = new URL(event.request.url);
     // If this is an incoming POST request for the
     // registered "action" URL, respond to it.
-    if (event.request.method === "POST" && url.pathname === "/confirm") {
+    if (event.request.method === "POST" && url.pathname === "/upload") {
         event.respondWith(
             (async () => {
                 const formData = await event.request.formData();
@@ -22,8 +22,9 @@ self.addEventListener("fetch", function (event) {
 
                 console.log({ filename });
                 // const link = formData.get("link") || "";
-                const responseUrl = "/confirm?filename=" + filename;
-                return Response.redirect(responseUrl, 303);
+                return Response.json({ filename });
+                // const responseUrl = "/confirm?filename=" + filename;
+                // return Response.redirect(responseUrl, 303);
             })()
         );
     }
