@@ -39,7 +39,7 @@ export default function Home() {
 
     return (
         <div className="flex flex-col p-10 gap-10">
-            <h1>Up To Drive 2</h1>
+            <h1>Up To Drive 4</h1>
             <p>Just a humble Heuristic Collector`s Evidence Uploader</p>
             <div>
                 <input

@@ -1,9 +1,9 @@
 {
-    "name": "UP To Drive3",
-    "short_name": "Up to Drive 3",
-    "description": "A humble file uploader3",
+    "name": "UP To Drive4",
+    "short_name": "Up to Drive 4",
+    "description": "A humble file uploader4",
     "lang": "en-US",
-    "ïd": "/?homescreen=3",
+    "ïd": "/?homescreen=4",
     "icons": [
         {
             "src": "/icons/icon-512x512.png",
@@ -47,7 +47,7 @@
     "background_color": "#FF0000",
     "start_url": "/",
     "scope": "./",
-    "display": "standalone",
+    "display": "browser",
     "orientation": "portrait",
     "launch_handler": {
         "client_mode": "auto"
